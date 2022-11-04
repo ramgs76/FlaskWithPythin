@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Home - Paws Rescue Center</title>
-		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+{% extends "base.html" %}
 
-	</head>
-	<body>
-		<h1><center>Paws Rescue Center 🐾</h1>
-		<table>
-			<tr>
-				<th>Image</th>
-				<th>Name</th>
-				<th>Age</th>
-				<th>Bio</th>
+{%  block title %}
+Forms Demo
+{% endblock %}
 
-			</tr>
-			{% for paw in Pet %}
-
-			  <tr>
-				<td><img src="{{url_for('static', filename=paw['id']|string+'.jpg')}}" height="100"></td>
-				<td>{{paw['name']}}</td>
-				<td>{{paw['age']}}</td>
-				<td>{{paw['bio']}}</td>
-			  </tr>
-			{% endfor %}
-		</table>
-	</body>
-</html>
+{%  block content %}
+<h1>Home Page</h1>
+{% endblock %}
