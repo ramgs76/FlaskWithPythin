@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic Variable</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+            {% for i in range(5) %}
+            
+            {% for username,location in user.items() %}
+
+                <tr>
+                    <h1>
+                        <td >{{ i,loop.index }}</td>
+                        <td>{{ username }}</td>
+                        <td >{{ location }}</td>
+                    </h1>
+
+                </tr>
+            {% endfor %}
+           
+
+            
+            {% endfor %}
+        </table>
+
+    </body>
+
+
+</html>
